@@ -1,6 +1,7 @@
 const app = require("./app");
 const connectDatabase = require("./db/Database");
 const cloudinary = require("cloudinary");
+const cors = require("cors");
 
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
@@ -28,7 +29,7 @@ cloudinary.config({
 app.use(cors());
 // create server
 const server = app.listen(process.env.PORT, () => {
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  console.log(`Server is running on https://localhost:${process.env.PORT}`);
 });
 
 // unhandled promise rejection
