@@ -15,7 +15,7 @@ const BASE_URL = process.env.BASE_URL;
 
 app.use(
   cors({
-    origin: [`${BASE_URL}`],
+    origin: true,
     credentials: true,
   })
 );
